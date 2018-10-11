@@ -1,0 +1,18 @@
+// CSS GRID MIXINS
+  // 1 - Grid parent
+@mixin display_grid
+  display: -ms-grid
+  display: grid
+
+  // 2 - grid child
+    // - grid-template-column
+@mixin grid_child__column ($col-start, $col-end) 
+  -ms-grid-column: $col-start
+  -ms-grid-column-span: $col-end - $col-start
+  grid-column: #{$col-start}/#{$col-end}
+
+// - grid-template-row
+@mixin grid_child__row ($row-start, $row-end) 
+  -ms-grid-row: $row-start
+  -ms-grid-row-span: $row-end - $row-start
+  grid-row: #{$row-start}/#{$row-end}
