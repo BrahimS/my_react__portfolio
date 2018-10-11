@@ -1,12 +1,12 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import LogoImage from '../../images/logoBrahim@2x.png'
+import LogoImage from '../../images/logoBrahim.svg'
 
 const logoStyle = {
   display: 'block',
   width: '124px',
   height: '87px',
-  margin: '80px 0 80px 80px'
+  padding: '80px 0 80px 80px'
 }
 
 const Header = () => (

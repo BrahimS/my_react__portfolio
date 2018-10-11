@@ -1,8 +1,47 @@
 @import ../global_styles/index
-html, body
+html, body 
+	background: $bkgColor
+
+body 
+	width: 100%
+	height: 100vh
+	margin: 0
+	padding: 0
+	background: url('../../images/yellow_drawer.svg')
+	background-position: right
+	background-size: contain
+	background-repeat: no-repeat
+	overflow: hidden
+	color: $textColor
+	line-height: $base_line__height
+	font-weight: $font_weight__normal
+	font-size: $font_size__base
+	font-family: $font_family__primary
+
+p 
+	opacity: 0.7
+	margin-bottom: 20px
 
 .bs_app 
-  @include display_grid
-  max-width: 1200px
-  padding: 80px
+	@include display_grid
+	grid-template-columns: 50% 50%
+	grid-template-rows: 1fr
+	max-width: 1200px
+	padding: 80px
+	box-sizing: border-box
+
+
+.bs_left
+.bs_right
+
+footer 
+	position: absolute
+	bottom: 0
+	width: 100vw
+	height: 80px
+
+	&.isOpen
+		background: $white
+
+
 
