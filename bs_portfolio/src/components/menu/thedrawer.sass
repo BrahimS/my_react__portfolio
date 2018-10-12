@@ -12,14 +12,14 @@ $trns_duration  : 0.3s
 
 .ant-drawer-content-wrapper
 	box-shadow: none !important
-	width: 30% !important
+	width: 20% !important
+	background-color: $yellow !important
 
 .ant-drawer-content
+	background-color: transparent
 	box-shadow: none 
-	background: transparent !important
 
 .ant-drawer-header
-	background: $yellow 
 	border: none
 
 .ant-btn-primary 
@@ -35,19 +35,20 @@ $trns_duration  : 0.3s
 	&:focus
 		background: transparent
 
-.humburger,.ant-drawer-close  
+.humburger,.ant-drawer-close
 	position: absolute
 	top: $padding
 	right: $padding
-	height: 17px
 	background-repeat: no-repeat
 	background-position: right
 	background-size: contain
 
 .humburger
+	height: 17px
 	background: url(../../images/humburger.svg)
 
 .ant-drawer-close 
+	height: 24px
 	background: url(../../images/close.svg)
 	background-repeat: no-repeat
 	background-position: right
@@ -56,14 +57,16 @@ $trns_duration  : 0.3s
 	& span svg
 		display: none
 
+.ant-drawer-close-x
+	width: 80px
+
 .ant-drawer-body 
-	margin-top: 30%
-	margin-left: 25%
+	margin-top: 50%
+	margin-left: -5%
 	text-align: left
 	font-weight: bold
 	line-height: 1.3
-	font-size: 60px
-
+	font-size: 48px
 
 	& a 
 		color: $textColor !important

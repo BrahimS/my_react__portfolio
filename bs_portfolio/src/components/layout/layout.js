@@ -11,10 +11,8 @@ import './layout.sass'
 const profilStyle = {
 	position: 'absolute',
 	bottom: '0',
-	marginLeft: '12.5%',
-	marginTop: '1%',
-	display: 'block',
-	width: '580px',
+	right: '20%',
+	width: '500px',
 	height: 'auto',
 }
 
@@ -42,10 +40,10 @@ const Layout = ({ children }) => (
         </Helmet>
         <Header siteTitle={data.site.siteMetadata.title} />
         <div className="bs_app">
+					<section className="bs_right">
 					<section className="bs_left">
 							{ children }			
 					</section>
-					<section className="bs_right">
 						<Nav></Nav>
 						<div>
 							<img src={ profilImg }

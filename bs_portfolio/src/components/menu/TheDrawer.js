@@ -21,7 +21,8 @@ class TheDrawer extends React.Component {
 	render() {
 		return (
 			<div className="humburger">
-				<Button type="primary" onClick={this.showDrawer}>
+				<Button type="primary" onClick={this.showDrawer}
+				>
 				</Button>
 				<Drawer
 					title=""
