@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import Layout from '../components/layout/layout'
 import Button from '../components/buttons/Button'
 import HOne from '../components/headlines/HeadLines'

@@ -8,13 +8,6 @@ import Footer from '../footer/Footer'
 import profilImg from '../../images/profil@2x.png'
 import './layout.sass'
 
-const profilStyle = {
-	position: 'absolute',
-	bottom: '0',
-	right: '20%',
-	width: '500px',
-	height: 'auto',
-}
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -40,14 +33,13 @@ const Layout = ({ children }) => (
         </Helmet>
         <Header siteTitle={data.site.siteMetadata.title} />
         <div className="bs_app">
-					<section className="bs_right">
 					<section className="bs_left">
 							{ children }			
 					</section>
 						<Nav></Nav>
+					<section className="bs_right">
 						<div>
-							<img src={ profilImg }
-								style={ profilStyle } alt="profil"/>
+							<img className="profil_img" src={ profilImg }alt="profil"/>
 						</div>
 					</section>
          <Footer></Footer>

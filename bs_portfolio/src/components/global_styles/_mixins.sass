@@ -16,3 +16,30 @@
   -ms-grid-row: $row-start
   -ms-grid-row-span: $row-end - $row-start
   grid-row: #{$row-start}/#{$row-end}
+
+// Breakpoints
+$brkpoint_sm: 1px
+$brkpoint_md: 767px
+$brkpoint_lg: 1024px
+$brkpoint_xlg: 1200px
+
+// Media queries
+@mixin mediaQ($break)
+	@if $break == "small"
+		@media (min-width: $brkpoint_sm) and (max-width: $brkpoint_md)
+				@content
+
+	@else if $break == "medium"
+		@media (min-width: $brkpoint_md + 1) and (max-width: $brkpoint_lg)
+			@content
+
+	@else if $break == "large"
+		@media (min-width: $brkpoint_lg + 1)
+			@content
+
+	@else if $break == "x_large"
+		@media (min-width: $brkpoint_xlg)
+			@content
+
+	@else
+		@error "Ai! No value could be retrieved for `#{$break}` "

@@ -21,10 +21,21 @@ body
 	font-weight: $font_weight__normal
 	font-size: $font_size__base
 	font-family: $font_family__primary
+	@include mediaQ(medium)
+		font-size: $font_size__base + 1
+
+
+h1
+	line-height: 0.9 
+	font-size: ($font_size__base + 4) * 4
+	@include mediaQ(medium)
+		line-height: 1
+		font-size: ($font_size__base + 4) * 3
 
 p 
 	opacity: 0.7
 	margin-bottom: 20px
+	letter-spacing: 0.3px
 
 .bs_app 
 	@include display_grid
@@ -36,7 +47,24 @@ p
 
 
 .bs_left
+
 .bs_right
+.logo
+	display: block
+	width: 200px
+	height: 87px
+	padding: 80px 0 200px 80px
+	@include mediaQ(medium)
+		padding: 80px 0 100px 80px
+	
+.profil_img 
+	position: absolute
+	bottom: 0
+	width: 500px
+	right: 20%
+	@include mediaQ(medium)
+		width: 350px
+		right: 2%
 
 footer 
 	position: absolute

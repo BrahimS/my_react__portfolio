@@ -11,7 +11,7 @@ const logoStyle = {
 
 const Header = () => (
   <header>
-    <div style={logoStyle}>
+    <div className="logo">
         <Link
           to="/">
             <img src={LogoImage} alt="logo"/>

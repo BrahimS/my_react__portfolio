@@ -1,5 +1,5 @@
 import React from 'react'
-import { Drawer, Button, Radio } from 'antd'
+import { Drawer } from 'antd'
 import Nav from './Nav'
 import './thedrawer.sass'
 
@@ -20,10 +20,10 @@ class TheDrawer extends React.Component {
 
 	render() {
 		return (
-			<div className="humburger">
-				<Button type="primary" onClick={this.showDrawer}
+			<div>
+				<button className="ant-btn-primary  humburger" type="primary" onClick={this.showDrawer}
 				>
-				</Button>
+				</button>
 				<Drawer
 					title=""
 					placement="right"
