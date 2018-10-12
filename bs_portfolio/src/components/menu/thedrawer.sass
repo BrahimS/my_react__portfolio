@@ -1,0 +1,77 @@
+// This is to over write the ant design drawer style
+$yellow : #D1BD15
+$white : #fff
+$green : #22D57B
+$textColor: #292c27
+$padding: 80px
+$trns_duration  : 0.3s
+
+.ant-drawer.ant-drawer-open .ant-drawer-mask
+	opacity: 0 !important
+	display: none !important
+
+.ant-drawer-content-wrapper
+	box-shadow: none !important
+	width: 30% !important
+
+.ant-drawer-content
+	box-shadow: none 
+	background: transparent !important
+
+.ant-drawer-header
+	background: $yellow 
+	border: none
+
+.ant-btn-primary 
+	background: transparent
+	border: none
+	box-shadow: none
+	color: $textColor
+
+	&.isOpen
+		display: none
+
+	&:hover, 
+	&:focus
+		background: transparent
+
+.humburger,.ant-drawer-close  
+	position: absolute
+	top: $padding
+	right: $padding
+	height: 17px
+	background-repeat: no-repeat
+	background-position: right
+	background-size: contain
+
+.humburger
+	background: url(../../images/humburger.svg)
+
+.ant-drawer-close 
+	background: url(../../images/close.svg)
+	background-repeat: no-repeat
+	background-position: right
+	background-size: contain
+
+	& span svg
+		display: none
+
+.ant-drawer-body 
+	margin-top: 30%
+	margin-left: 25%
+	text-align: left
+	font-weight: bold
+	line-height: 1.3
+	font-size: 60px
+
+
+	& a 
+		color: $textColor !important
+		opacity: 0.4
+		transition: $trns_duration
+
+		&:hover,
+		&:active,
+		&:focus
+			opacity: 1
+			text-decoration: none

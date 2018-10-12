@@ -4,17 +4,17 @@ import LogoImage from '../../images/logoBrahim.svg'
 
 const logoStyle = {
   display: 'block',
-  width: '124px',
+  width: '200px',
   height: '87px',
-  padding: '80px 0 80px 80px'
+  padding: '80px 0 200px 80px'
 }
 
 const Header = () => (
   <header>
-    <div>
+    <div style={logoStyle}>
         <Link
           to="/">
-            <img src={LogoImage} style={logoStyle} alt="logo"/>
+            <img src={LogoImage} alt="logo"/>
         </Link>
     </div>
   </header>

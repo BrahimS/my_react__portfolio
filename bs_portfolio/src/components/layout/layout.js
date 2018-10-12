@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 import Header from '../header/header'
-import Nav from '../menu/Nav'
+import Nav from '../menu/TheDrawer'
 import Footer from '../footer/Footer'
 import profilImg from '../../images/profil@2x.png'
 import './layout.sass'
@@ -47,9 +47,10 @@ const Layout = ({ children }) => (
 					</section>
 					<section className="bs_right">
 						<Nav></Nav>
-						<img src={ profilImg }
-						style = { profilStyle }
-						alt="profil"/>
+						<div>
+							<img src={ profilImg }
+								style={ profilStyle } alt="profil"/>
+						</div>
 					</section>
          <Footer></Footer>
         </div>

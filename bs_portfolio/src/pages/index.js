@@ -27,7 +27,7 @@ const IndexPage = () => (
 			</section>
     	<Button text="Contact Me"></Button>
 		</main>
-    	{/* <Link to="/page-2/">Go to page 2</Link> */}
+    	
 	</Layout>
 )
 
