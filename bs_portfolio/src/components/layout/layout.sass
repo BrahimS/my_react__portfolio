@@ -23,6 +23,8 @@ body
 	font-family: $font_family__primary
 	@include mediaQ(medium)
 		font-size: $font_size__base + 1
+	@include mediaQ(small)
+		background: $bkgColor
 
 
 h1
@@ -31,6 +33,8 @@ h1
 	@include mediaQ(medium)
 		line-height: 1
 		font-size: ($font_size__base + 4) * 3
+	@include mediaQ(small)
+		font-size: 	($font_size__base + 4) * 1.2
 
 p 
 	opacity: 0.7
@@ -44,9 +48,20 @@ p
 	max-width: 1200px
 	padding: 80px
 	box-sizing: border-box
+	@include mediaQ(small)
+		grid-template-columns: 100%
+		padding: 40px
+
+.bs_left 
+	h1 
+		@include mediaQ(small)
+			margin-bottom: 20px !important
+			margin-top: 10px !important
+	button
+		@include mediaQ(small)
+			margin-top: 20px !important
 
 
-.bs_left
 
 .bs_right
 .logo
@@ -56,6 +71,9 @@ p
 	padding: 80px 0 200px 80px
 	@include mediaQ(medium)
 		padding: 80px 0 100px 80px
+	@include mediaQ(small)
+		width: 140px
+		padding: 40px 0 80px 40px
 	
 .profil_img 
 	position: absolute
@@ -65,12 +83,17 @@ p
 	@include mediaQ(medium)
 		width: 350px
 		right: 2%
+	@include mediaQ(small)
+		display: none
 
 footer 
 	position: absolute
 	bottom: 0
 	width: 100vw
 	height: 80px
+	@include mediaQ(small)
+		padding: 0px  !important
+		margin-left: -40px
 
 	&.isOpen
 		background: $white

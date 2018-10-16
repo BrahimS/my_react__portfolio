@@ -9,16 +9,16 @@ const Nav = (props) => {
 				<Link to="/">Home</Link>
 			</li>
 			<li>
-				<Link to="/">Projects</Link>
+				<Link to="/projects">Projects</Link>
 			</li>
 			<li>
-				<Link to="/">Clients</Link>
+				<Link to="/clients">Clients</Link>
 			</li>
 			<li>
-				<Link to="/page-2">Articles</Link>
+				<Link to="/articles">Articles</Link>
 			</li>
 			<li>
-				<Link to="/">Contact</Link>
+				<Link to="/contact">Contact</Link>
 			</li>
 		</ul>
 	</nav>

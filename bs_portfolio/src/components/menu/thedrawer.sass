@@ -17,7 +17,8 @@ $trns_duration  : 0.3s
 	background-color: $yellow !important
 	@include mediaQ(medium)
 		width: 50% !important
-
+	@include mediaQ(small)
+		width: 50% !important
 .ant-drawer-content
 	background-color: transparent
 	box-shadow: none 
@@ -45,6 +46,9 @@ $trns_duration  : 0.3s
 	background-repeat: no-repeat
 	background-position: right
 	background-size: contain
+	@include mediaQ(small)
+		right: $padding / 2
+		top: $padding / 2
 
 
 .humburger
@@ -77,6 +81,9 @@ $trns_duration  : 0.3s
 		margin-top: 35%
 		margin-left: 30%
 		font-size: 24px
+	@include mediaQ(small)
+		font-size: 30px
+		margin-left: 5%
 
 	& a 
 		color: $textColor !important
