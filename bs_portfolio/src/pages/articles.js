@@ -1,33 +1,53 @@
 import React from 'react'
-import Layout from '../components/layout/layout'
+import { Link } from 'gatsby'
+import ArticlesLayout from '../components/layout/ArticlesLayout'
 import Button from '../components/buttons/Button'
 import HOne from '../components/headlines/HeadLines'
 
-const Articles = () => (
-	<Layout>
-		<main>
+
+const BlogPage = ({ data }) => (
+	<ArticlesLayout>
+
 			<section className="content">
 				<HOne h_one="Articles"></HOne>
-				<p>
-					As an independent front-end developer, I have keen eye
-					to create and translate the design into responsive pixel 
-					perfect using a valid, modular and accessible syntax. 
-					I create structured and stylish interactive user interfaces using 
-					pleasant and appropriate animation, without neglecting performance 
-				</p>
-				<p>
-					I build web applications using modern technologies such as: 
-					HTML5, CSS3, Javascript, Node, React
-				</p>
-				<p>
-					Regularly, I experiment with new technologies on codepen 
-					as well as on github.
-				</p>
+				<section>
+					{data.allMarkdownRemark.edges.map(post => (
+						<article className="post_card" key={post.node.id}>
+							<img className={post.node.frontmatter.imgbg} alt="" />
+							<div className="post_content">
+								<span className="post_date">{post.node.frontmatter.date}</span>
+								<h2 className="post_headline">{post.node.frontmatter.title}</h2>
+								<p className="post_para">{post.node.excerpt}</p>
+								<Link className="post_link" to={post.node.frontmatter.path}>Read this</Link>
+							</div>
+						</article>
+					))}
+				</section>
 			</section>
-			<Button text="Contact Me"></Button>
-		</main>
+
     	
-	</Layout>
+	</ArticlesLayout>
 )
 
-export default Articles
+export const pageQuey = graphql`
+	query BlogIndeyQuery {
+		allMarkdownRemark{
+			edges{
+				node{
+					id
+					frontmatter{
+						title
+						date
+						author 
+						category
+						path
+						imgbg
+					}
+					excerpt
+				}
+			}
+		}
+	}
+`
+
+export default BlogPage
