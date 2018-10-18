@@ -7,13 +7,14 @@ export default function SinglePost({ data }) {
 	const post = data.markdownRemark 
 	return (
 		<SinglePostLayout>
-			<section>
+			<section className="single_wrapper">
 				<Link to="/articles"> Go back</Link>
 				<br />
-				<article>
+				<article> 
 					<h1>{post.frontmatter.title}</h1>
 					<span>{post.frontmatter.date}</span>
-					<div dangerouslySetInnerHTML={{ __html: post.html }} />
+					<img className="single_img" src={post.frontmatter.postimg} alt={post.frontmatter.postimgname}/>
+					<div className="single_paragraphs" dangerouslySetInnerHTML={{ __html: post.html }} />
 				</article>
 			</section>
 		</SinglePostLayout>
@@ -30,6 +31,7 @@ export const postQuery = graphql`
 				author
 				date
 				imgbg
+				postimg
 			}
 		}
 	}

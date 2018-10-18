@@ -111,10 +111,29 @@ p
 	font-family: $font_family__primary
 
 .post_para
-	margin-top: 10px
+	margin-top: 10pxs
 	letter-spacing: 0
 	color: $textColor
 	font-size: $font_size__base - 2
+
+.single_post
+	padding: $padding
+	@include mediaQ(small)
+		padding: $padding / 2
+
+	& p 
+		opacity: 1
+
+.single_img 
+	width: 100%
+	height: auto
+	margin-top: $padding - 60
+	margin-bottom: $padding - 60
+	padding: 0
+	left: 0
+
+.single_paragraphs 
+	display: inline-block
 
 
 .bs_right
