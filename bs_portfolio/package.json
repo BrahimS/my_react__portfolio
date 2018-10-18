@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
+  "name": "bs-portfolio",
+  "description": "my personal portfolio",
   "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "BS",
   "dependencies": {
     "@babel/preset-env": "^7.1.0",
     "antd": "^3.10.0",
@@ -18,13 +18,15 @@
     "node-sass": "^4.9.3",
     "react": "^16.5.1",
     "react-dom": "^16.5.1",
-    "react-helmet": "^5.2.0"
+    "react-helmet": "^5.2.0",
+    "serve": "^10.0.2"
   },
   "keywords": [
     "gatsby"
   ],
   "license": "MIT",
   "scripts": {
+		"start": "serve public/",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write '**/*.js'",
